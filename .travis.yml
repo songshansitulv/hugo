@@ -75,3 +75,5 @@ script:
   - ./hugo -s docs/
   - ./hugo --renderToMemory -s docs/
   - df -h
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
